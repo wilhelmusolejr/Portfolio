@@ -16,16 +16,19 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark text-light py-4 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark text-light py-md-5 py-4 sticky-top">
         <div class="container">
-            <a href="#" class="logo text-light text-decoration-none text-uppercase">WOLE</a>
+            <a href="#" class="logo text-light text-decoration-none text-capitalize fs-4">Wilhelmus Ole</a>
             <ul class="d-none">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Experience</a></li>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">About</a></li>
             </ul>
-            <div class="d-flex align-items-center gap-3">
+            <div class="">
+                <a href="#" class="text-light text-decoration-none fs-4">About</a>
+            </div>
+            <div class="d-flex align-items-center gap-3 d-none">
                 <a href="" class="btn btn-primary">Resume</a>
                 <i class="fa-solid fa-bars"></i>
             </div>
