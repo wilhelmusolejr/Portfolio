@@ -129,6 +129,9 @@ footer p {
 /* ------------------------------------- */
 header {
     min-height: 100vh;
+    position: relative;
+
+    overflow: hidden;
 }
 
 
@@ -207,4 +210,20 @@ nav .active {
 nav ul {
     list-style-type: none;
     margin: 0;
+}
+
+
+.animation-bg {
+    white-space: nowrap;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 720px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(219, 219, 219, .1);
+
+    cursor: default;
 }

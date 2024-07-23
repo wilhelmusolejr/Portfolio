@@ -20,7 +20,6 @@
                 </div>
                 @endfor
 
-                {{-- <a href="#" class="btn btn-primary mb-5">See more</a> --}}
             </div>
 
             <div class="quick-about-me mx-350 fs-5 text-light-light">

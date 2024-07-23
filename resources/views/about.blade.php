@@ -1,12 +1,16 @@
 <x-layout>
 
     <header class="d-flex justify-content-center align-items-center bg-dark text-light">
-        <div class="container mx-350">
+
+        <div class="container mx-350 z-1">
             <p class="text-light-light">Hi, my name is</p>
             <h2 class="fs-1">Wilhelmus Ole Jr.</h2>
             <p class="mt-3 text-light-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio alias eius laboriosam maxime mollitia voluptate eum, perferendis sint aliquam aliquid omnis delectus animi quisquam consequatur, labore eligendi perspiciatis atque!</p>
             <a href="#" class="btn btn-primary mt-5">Resume</a>
         </div>
+
+        <p class="animation-bg text-uppercase">Programming Programming Programming Programming Programming Programming Programming Programming Programming Programming Programming Programming Programming Programming </p>
+
     </header>
 
     <main class="bg-dark text-light">
