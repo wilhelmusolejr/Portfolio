@@ -6,6 +6,8 @@
 
     --light-color: #f5f5f5;
     --light-light-color: #8f8f8f;
+
+    --light-stroke-color: rgba(219, 219, 219, .1);
 }
 
 * {
@@ -115,8 +117,12 @@ body {
     padding:25vh 0 ;
 }
 .quick-about-me p {
+    font-size: 18px;
     line-height: 160%;
-    font-weight: 200;
+}
+
+.quick-about-me a:hover {
+    text-decoration: underline !important;
 }
 
 footer p {
@@ -135,6 +141,18 @@ header {
 }
 
 
+header {
+    background-color: var(--dark-color); /* Fallback color for browsers that do not support gradients */
+    background-image: linear-gradient(to top right,
+        var(--dark-color),
+        var(--dark-color),
+        #0A0A0A,
+        var(--dark-color),
+        rgba(54, 54, 54, 0.05),
+        var(--dark-color),
+        #000
+    )
+}
 
 
 
@@ -157,12 +175,24 @@ header {
 .about-me-image {
     border-radius: 24px;
     overflow: hidden;
+    position: relative;
+
+    width: 370px;
+    height: 550px;
+
+    border: 2px solid var(--light-stroke-color);
 }
+
 .about-me-image img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {
@@ -200,11 +230,18 @@ nav .active {
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
+.nav-tabs {
+    --bs-nav-tabs-border-color: var(--light-light-color) !important;
+}
+
 .nav-tabs button {
     background-color: transparent !important;
     color: var(--light-color) !important;
 }
 
+.nav-tabs button.active {
+    border-color: var(--light-light-color) !important;
+}
 
 
 nav ul {
@@ -217,13 +254,84 @@ nav ul {
     white-space: nowrap;
 
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
 
     font-size: 720px;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(219, 219, 219, .1);
+    -webkit-text-stroke: 1px var(--light-stroke-color);
 
     cursor: default;
 }
+
+.flex-list li {
+    flex: 1 0 50%; /* Adjust the basis to control the width of items */
+
+    list-style: none;
+    position: relative;
+    padding-left: 20px; /* Adjust this value as needed */
+}
+.flex-list li::before {
+    content: '•'; /* Unicode for a bullet */
+    color: var(--light-color); /* Change this to your desired color */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Adjust size as needed */
+    line-height: 1;
+}
+
+
+/* ----------- ABOUT PAGE */
+.projects .project {
+    border-radius: 10px;
+}
+.projects .project-image {
+    position: relative;
+    border: 1px solid var(--light-stroke-color);
+}
+.projects .project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 30px;
+}
+.projects .project-info i {
+    background-color: var(--dark-color);
+    border: 1px solid var(--light-light-color);
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.fa-code {
+
+}
+.fa-pen-nib {
+    color: green;
+}
+.fa-robot {
+    color: green;
+}
+
+
+#project-section input,
+#project-section label {
+    cursor: pointer;
+}
+
+#project-section input[type="checkbox"]:checked {
+    border-color: var(--light-light-color);
+}
+
+#project-section input[type="checkbox"] {
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+

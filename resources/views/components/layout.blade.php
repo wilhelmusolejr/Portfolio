@@ -12,7 +12,8 @@
         <script defer src="https://kit.fontawesome.com/6b2bcc8033.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-        <script defer src="{{ asset('js/about.js') }}"></script>
+
+        @stack('scripts')
 
     </head>
 

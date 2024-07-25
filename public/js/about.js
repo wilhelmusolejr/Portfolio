@@ -24,4 +24,30 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // --------------------------------------
+    const projectFilter = document.querySelector('.project-filter');
+    const checkboxes = projectFilter.querySelectorAll('.form-check-input');
+    const projects = document.querySelectorAll('.projects .project');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            filterProjects();
+        });
+    });
+
+    const filterProjects = () => {
+        const activeFilters = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        projects.forEach(project => {
+            const projectTypes = project.className.split(' ').slice(1); // Get all classes except 'project'
+            const isVisible = projectTypes.some(type => activeFilters.includes(type));
+            project.style.display = isVisible ? 'block' : 'none';
+        });
+    };
+
+    // Initial filter on page load
+    filterProjects();
 });
