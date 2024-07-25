@@ -127,99 +127,10 @@
 
                 <div class="projects d-flex justify-content-center flex-wrap gap-5">
 
-                    @php
-                    $projects = [
-                        [
-                            'title' => 'Mobhie',
-                            'description' => 'Online Consultation Clinic',
-                            'type' => ['develop', 'design'],
-                            'file' => 'xx',
-                            'link' => 'project/mobhie'
-                        ],
-                        [
-                            'title' => 'PennyWISE PH',
-                            'description' => 'Online Consultation Clinic',
-                            'type' => ['develop', 'design'],
-                            'file' => 'pennywise',
-                            'link' => 'project/pennywise'
-                        ],
-                        [
-                            'title' => 'Consultation Clinic',
-                            'description' => 'Online Consultation Clinic',
-                            'type' => ['develop', 'design'],
-                            'file' => '1',
-                            'link' => 'project/consultation-clinic'
-                        ],
-                        [
-                            'title' => 'Jollymax BOT',
-                            'description' => 'Jollymax Automation',
-                            'type' => ['automate'],
-                            'file' => '4',
-                            'link' => 'project/jollymax'
-                        ],
-                        [
-                            'title' => 'Tech Vuitton',
-                            'description' => 'Tech Vuitton Design',
-                            'type' => ['design'],
-                            'file' => '5',
-                            'link' => 'project/tech-vuitton'
-                        ],
-                        [
-                            'title' => 'Shopeeling',
-                            'description' => 'Shopeeling',
-                            'type' => ['develop', 'design'],
-                            'file' => '8',
-                            'link' => 'project/shopeeling'
-                        ],
-                        [
-                            'title' => 'Microsoft Reward BOT',
-                            'description' => 'Microsoft Reward Automation',
-                            'type' => ['automate'],
-                            'file' => '2',
-                            'link' => 'project/microsoft-reward'
-                        ],
-                        [
-                            'title' => 'Gcash BOT',
-                            'description' => 'Gcash Automation',
-                            'type' => ['automate'],
-                            'file' => '3',
-                            'link' => 'project/gcash'
-                        ],
-                        [
-                            'title' => 'Money Tracker v1',
-                            'description' => 'Money Tracker',
-                            'type' => ['develop', 'design'],
-                            'file' => '6',
-                            'link' => 'project/money-tracker-v1'
-                        ],
-                        [
-                            'title' => 'NFT marketplace',
-                            'description' => 'Money Tracker',
-                            'type' => ['design'],
-                            'file' => '7',
-                            'link' => 'project/nft-marketplace'
-                        ],
-                        [
-                            'title' => 'Netflakes',
-                            'description' => 'Netflakes',
-                            'type' => ['develop', 'design'],
-                            'file' => '9',
-                            'link' => 'project/netflakes'
-                        ],
-                        [
-                            'title' => 'E-commerce',
-                            'description' => 'E-commerce',
-                            'type' => ['design'],
-                            'file' => '10',
-                            'link' => 'project/e-commerce'
-                        ]
-                    ];
-                    @endphp
-
                     @foreach ($projects as $project)
                     <div class="project {{ implode(' ', $project['type']) }}">
                         <div class="project-image">
-                            <a href="{{ $project['link'] }}"><img src="{{ asset('img/Project/'. $project['file'] .'.jpg') }}" alt=""></a>
+                            <a href="{{ $project['link'] }}" target="_blank"><img src="{{ asset('img/Projects/Portfolio/'. $project['file']['portfolio']) }}" alt=""></a>
                             <div class="project-info d-flex justify-content-end gap-2">
                                 @foreach ($project['type'] as $type)
                                     @switch($type)

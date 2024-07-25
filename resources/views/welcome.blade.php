@@ -8,41 +8,11 @@
 
             <div class="work-items d-flex justify-content-between flex-wrap">
 
-                @php
-                    $projects = [
-                        [
-                            'title' => 'Mobhie',
-                            'description' => 'Movie website platform',
-                            'file' => 'mobhie'
-                        ],
-                        [
-                            'title' => 'Consultation Clinic',
-                            'description' => 'Online Consultation Clinic',
-                            'file' => 'clinic'
-                        ],
-                        [
-                            'title' => 'Shopeeling',
-                            'description' => 'E-commerce application',
-                            'file' => 'shopeeling'
-                        ],
-                        [
-                            'title' => 'PennyWISE',
-                            'description' => 'Money tracker app',
-                            'file' => 'pennywise'
-                        ],
-                        [
-                            'title' => 'NFT marketplace',
-                            'description' => 'NFT marketplace site',
-                            'file' => 'opensea'
-                        ]
-                    ];
-                @endphp
-
                 @foreach ($projects as $index => $project)
                     @if ($index < 5) {{-- Limit to 5 iterations --}}
                     <div class="work-item card bg-dark text-light">
                         <div class="work-item-image">
-                            <img class="" src="{{ asset('img/' . $project['file'] . '.webp') }}" alt="Card image cap">
+                            <a href="{{ $project['link'] }}" target="_blank"><img class="" src="{{ asset('img/Projects/Intro/' . $project['file']['intro']) }}" alt="{{ $project['title'] }} image"></a>
                         </div>
                         <div class="card-body text-capitalize text-center">
                             <h2 class="fs-4 pt-3">{{ $project['title'] }}</h2>
