@@ -1,4 +1,4 @@
-<x-project.layout :title="$title" :projectPath="$projectPath">
+<x-project.layout :title="$title" :projectPath="$projectPath" :project="$project">
     <div class="text-center fs-4 project-header-intro text-light">
         <h2>{{ $project['title'] }}</h2>
     </div>
