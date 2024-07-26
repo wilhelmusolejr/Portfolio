@@ -30,7 +30,7 @@
 
             <div class="quick-about-me mx-350 fs-5 text-light-light">
                 <p class="mb-3">I’m Wilhelmus Ole Jr., a Junior Full-Stack Web Developer and Computer Science student. I specialize in creating visually appealing, responsive, and user-friendly websites. While I have experience in web automation and bot development, I’m currently focused on building innovative and impactful digital experiences in web development.</p>
-                <a href="{{ route('about') }}" class="text-light text-decoration-none mx-350 border-light">More about me</a>
+                <a href="{{ route('about') }}" class="text-light text-decoration-none border-light">More about me</a>
             </div>
 
         </div>

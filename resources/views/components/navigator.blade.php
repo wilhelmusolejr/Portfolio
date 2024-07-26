@@ -17,11 +17,11 @@
                 </ul>
 
                 <div class="d-flex justify-content-center align-items-center gap-3 ms-auto resume-parent">
-                    <a href="" class="btn btn-primary">Resume</a>
+                    <a href="{{ asset('file/cv.pdf') }}" class="btn btn-primary" download="cv.pdf">Download CV</a>
                 </div>
             @else
                 <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
-                    <li class="nav-item"><a class="nav-link text-light text-decoration-none fs-4" href="{{ route('about') }}">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-light text-decoration-none fs-4 p-0" href="{{ route('about') }}">About</a></li>
                 </ul>
             @endif
         </div>

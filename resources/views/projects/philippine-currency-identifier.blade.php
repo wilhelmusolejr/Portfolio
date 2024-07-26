@@ -79,7 +79,6 @@
         </ul>
     </x-project.section>
 
-
     <x-project.section>
         <x-project.header>Changelog</x-project.header>
         <ul>
@@ -97,5 +96,20 @@
                 <p>App working effectively across all supported versions.</p>
             </li>
         </ul>
+    </x-project.section>
+
+    <x-project.section>
+        <x-project.header>Screenshots</x-project.header>
+        <div class="d-flex flex-wrap gap-3 text-light">
+            <div class="text-center my-3 w-25">
+                <img src="{{ asset($projectPath.'screenshot3.jpg') }}" alt="Screenshot 2">
+            </div>
+            <div class="text-center my-3 w-25">
+                <img src="{{ asset($projectPath.'screenshot2.jpg') }}" alt="Screenshot 1">
+            </div>
+            <div class="text-center my-3 w-25">
+                <img src="{{ asset($projectPath.'screenshot1.jpg') }}" alt="Screenshot 2">
+            </div>
+        </div>
     </x-project.section>
 </x-project.layout>
