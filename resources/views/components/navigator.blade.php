@@ -4,7 +4,7 @@
 
         <!-- Toggle button for small devices -->
         <button class="navbar-toggler d-flex align-items-center justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fa fa-bars text-light"></i></span>
+            <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fa fa-bars text-light"></i></span>
         </button>
 
         <!-- Navbar content -->
@@ -16,7 +16,7 @@
                     <li class="nav-item"><a class="nav-link text-light-light text-decoration-none fs-4" href="#project-section">Project</a></li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-3 ms-auto">
+                <div class="d-flex justify-content-center align-items-center gap-3 ms-auto resume-parent">
                     <a href="" class="btn btn-primary">Resume</a>
                 </div>
             @else
