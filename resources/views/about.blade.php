@@ -2,7 +2,7 @@
     $project_path = "project/"
 @endphp
 
-<x-layout>
+<x-layout :title="$title">
 
     @push('scripts')
         <script defer src="{{ asset('js/about.js') }}"></script>

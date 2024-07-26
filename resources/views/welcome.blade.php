@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$title">
 
     <main class="bg-dark text-light">
         <div class="container">

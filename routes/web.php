@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+    $title = 'Home | Wilhelmus Ole';
+
     $projects = [
         [
             'title' => 'Philippine Currency Identifier',
@@ -158,12 +160,15 @@ Route::get('/', function () {
         return $a['project_showcase'] - $b['project_showcase'];
     });
 
-    // dd($showcaseProjects);
-
-    return view('welcome', ['projects' => $showcaseProjects]);
+    return view('welcome', [
+        'projects' => $showcaseProjects,
+        'title'=> $title
+    ]);
 }) -> name('home');
 
 Route::get('/about', function () {
+
+    $title = 'About | Wilhelmus Ole';
 
     $projects = [
         [
@@ -350,21 +355,32 @@ Route::get('/about', function () {
         ]
     ];
 
-    return view('about', ['projects' => $projects]);
+    return view('about', [
+        'projects' => $projects,
+        'title'=> $title
+    ]);
 }) -> name('about');
 
 Route::get('/project/philippine-currency-identifier', function() {
+    $title = 'Home | Wilhelmus Ole';
+
     return view('projects/philippine-currency-identifier');
 }) -> name('philippine-currency-identifier');
 
 Route::get('/project/mobhie', function() {
+    $title = 'Home | Wilhelmus Ole';
+
     return view('projects/mobhie');
 }) -> name('mobhie');
 
 Route::get('/project/pennywise', function() {
+    $title = 'Home | Wilhelmus Ole';
+
     return view('projects/pennywise');
 }) -> name('pennywise');
 
 Route::get('/project/online-appointment-and-consultation-clinic', function() {
+    $title = 'Home | Wilhelmus Ole';
+
     return view('projects/online-appointment-and-consultation-clinic');
 }) -> name('online-appointment-and-consultation-clinic');
