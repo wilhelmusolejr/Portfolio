@@ -1,10 +1,9 @@
-@props(['projectPath'])
-
 @php
-    $project_path = $projectPath;
+    $title = $title;
+    $projectPath = $projectPath;
 @endphp
 
-<x-layout>
+<x-layout :title="$title">
     <main class="text-light">
         <div class="mx-350 text-light-light">
             {{ $slot }}

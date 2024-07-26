@@ -12,7 +12,7 @@
                     @if ($index < 5) {{-- Limit to 5 iterations --}}
                     <div class="work-item card bg-dark text-light">
                         <div class="work-item-image">
-                            <a href="{{ $project['link'] }}" target="_blank"><img class="" src="{{ asset('img/Projects/Intro/' . $project['file']['intro']) }}" alt="{{ $project['title'] }} image"></a>
+                            <a href="{{ $project['link']['project'] }}" target="_blank"><img class="" src="{{ asset('img/Projects/Intro/' . $project['file']['intro']) }}" alt="{{ $project['title'] }} image"></a>
                         </div>
                         <div class="card-body text-capitalize text-center">
                             <h2 class="fs-4 pt-3">{{ $project['title'] }}</h2>

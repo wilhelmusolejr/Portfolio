@@ -1,14 +1,10 @@
-@php
-    $project_path = "img/Projects/Info/online-appointment-and-consultation-clinic/";
-@endphp
-
-<x-project.layout :projectPath="$project_path">
+<x-project.layout :title="$title" :projectPath="$projectPath">
     <div class="text-center fs-4 project-header-intro text-light">
-        <h2>Consultation Clinic</h2>
+        <h2>{{ $project['title'] }}</h2>
     </div>
 
     <div class="text-center mb-5">
-        <img class="rounded border border-light-light" src="{{ asset($project_path.'banner.png') }}" alt="Consultation Clinic banner">
+        <img class="rounded border border-light-light" src="{{ asset($projectPath.'banner.png') }}" alt="Consultation Clinic banner">
     </div>
 
     <x-project.section>
@@ -57,10 +53,10 @@
         <x-project.header>Screenshots</x-project.header>
         <div class="d-flex flex-column gap-3 text-light">
             <div class="text-center my-3">
-                <img src="{{ asset($project_path.'screenshot1.png') }}" alt="Screenshot 1">
+                <img src="{{ asset($projectPath.'screenshot1.png') }}" alt="Screenshot 1">
             </div>
             <div class="text-center my-3">
-                <img src="{{ asset($project_path.'screenshot2.png') }}" alt="Screenshot 2">
+                <img src="{{ asset($projectPath.'screenshot2.png') }}" alt="Screenshot 2">
             </div>
         </div>
     </x-project.section>

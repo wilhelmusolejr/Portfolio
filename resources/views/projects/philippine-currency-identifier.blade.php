@@ -1,18 +1,14 @@
-@php
-    $project_path = "img/Projects/Info/philippine-currency-identifier/";
-@endphp
-
-<x-project.layout :projectPath="$project_path">
+<x-project.layout :title="$title" :projectPath="$projectPath">
     <div class="text-center fs-4 project-header-intro text-light">
-        <h2>Philippine Currency Identifier</h2>
+        <h2>{{ $project['title'] }}</h2>
     </div>
 
     <div class="text-center mb-5">
-        <img class="rounded border border-light-light" src="{{ asset($project_path.'banner.jpg') }}" alt="">
+        <img class="rounded border border-light-light" src="{{ asset($projectPath.'banner.jpg') }}" alt="">
     </div>
 
     <x-project.section>
-        <p>The "Philippine Currency Identifier" is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity.</p>
+        <p>Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity.</p>
     </x-project.section>
 
     <x-project.section>
@@ -38,7 +34,7 @@
         <x-project.header>Download the Application</x-project.header>
         <p>Easily download the "Philippine Currency Identifier" app by scanning a QR code. Simply point your device's camera at the QR code, and you'll be directed to the download page.</p>
         <div class="text-center my-3">
-            <img src="{{ asset($project_path.'app_qr_3.png') }}" width="40%" alt="QR Code">
+            <img src="{{ asset($projectPath.'app_qr_3.png') }}" width="40%" alt="QR Code">
         </div>
         <p>If you encounter any issues with the QR code, please click <a href="https://bit.ly/ph-identifier" target="_blank">here</a> or manually visit bit.ly/ph-identifier to download the app directly.</p>
     </x-project.section>
@@ -103,6 +99,3 @@
         </ul>
     </x-project.section>
 </x-project.layout>
-
-
-

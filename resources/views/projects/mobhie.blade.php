@@ -1,14 +1,10 @@
-@php
-    $project_path = "img/Projects/Info/mobhie/";
-@endphp
-
-<x-project.layout :projectPath="$project_path">
+<x-project.layout :title="$title" :projectPath="$projectPath">
     <div class="text-center fs-4 project-header-intro text-light">
-        <h2>MOBHIE</h2>
+        <h2>{{ $project['title'] }}</h2>
     </div>
 
     <div class="text-center mb-5">
-        <img class="rounded border border-light-light" src="{{ asset($project_path.'banner.png') }}" alt="MOBHIE Banner">
+        <img class="rounded border border-light-light" src="{{ asset($projectPath.'banner.png') }}" alt="MOBHIE Banner">
     </div>
 
     <x-project.section>
@@ -66,15 +62,15 @@
         <x-project.header>Screenshots</x-project.header>
         <div class="d-flex flex-column gap-3 text-light">
             <div class="text-center my-3">
-                <img src="{{ asset($project_path.'screenshot1.PNG') }}" alt="Randomizer Feature">
+                <img src="{{ asset($projectPath.'screenshot1.PNG') }}" alt="Randomizer Feature">
                 <p class="py-2">Randomizer Feature</p>
             </div>
             <div class="text-center my-3">
-                <img src="{{ asset($project_path.'screenshot2.PNG') }}" alt="List of Trending Movies">
+                <img src="{{ asset($projectPath.'screenshot2.PNG') }}" alt="List of Trending Movies">
                 <p class="py-2">List of Trending Movies</p>
             </div>
             <div class="text-center my-3">
-                <img src="{{ asset($project_path.'screenshot3.PNG') }}" alt="Movie Preview">
+                <img src="{{ asset($projectPath.'screenshot3.PNG') }}" alt="Movie Preview">
                 <p class="py-2">Movie Preview</p>
             </div>
         </div>
