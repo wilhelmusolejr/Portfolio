@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const observerOptions = {
         root: null, // Use the viewport as the root
         rootMargin: '0px',
-        threshold: 0.5 // 50% of the element must be visible to be considered "in the viewport"
+        threshold: 0.35 // 50% of the element must be visible to be considered "in the viewport"
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
