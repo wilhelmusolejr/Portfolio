@@ -56,6 +56,9 @@ img {
     border: 1px solid var(--light-color) !important;
 }
 
+.navbar a {
+    border-bottom: 1px solid transparent;
+}
 .navbar a:hover {
     border-bottom: 1px solid var(--light-color) !important;
 }
@@ -262,9 +265,12 @@ header {
 
 
 
-
+.spacing:first-of-type {
+    border-top: 1px solid transparent;
+}
 .spacing {
     padding: 15vh 0;
+    border-top: 1px solid var(--light-stroke-color);
 }
 .spacing:last-of-type {
     padding-top: 15vh;

@@ -130,7 +130,6 @@
                 </div>
 
                 <div class="projects d-flex justify-content-center flex-wrap gap-5">
-
                     @foreach ($projects as $project)
                     <div class="project {{ implode(' ', $project['type']) }}">
                         <div class="project-image">
