@@ -54,6 +54,13 @@ img {
 .btn-primary {
     background-color: transparent !important;
     border: 1px solid var(--light-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add transition for smooth animation */
+}
+
+.btn-primary:hover {
+    background-color: var(--light-color) !important;
+    color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important; /* Ensure border color changes smoothly */
 }
 
 .navbar a {
