@@ -55,8 +55,8 @@
                         </div>
                         <div class="right">
                             <div class="about-me-image">
-                                <img src="{{ asset('img/aboutme.jpg') }}" alt="About Me Image">
-                                {{-- <img src="{{ asset('img/2.jpg') }}" alt="About Me Image"> --}}
+                                <img src="{{ asset('img/About-me/aboutme.jpg') }}" alt="About Me Image">
+                                {{-- <img src="{{ asset('img/About-me/4.jpg') }}" alt="About Me Image"> --}}
                             </div>
                         </div>
                     </div>

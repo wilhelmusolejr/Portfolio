@@ -149,6 +149,7 @@ body {
 }
 
 footer {
+    border-top: 2px solid var(--light-stroke-color);
     margin-top: 25vh;
 }
 footer p {
@@ -213,6 +214,17 @@ header {
     height: 550px;
 
     border: 2px solid var(--light-stroke-color);
+
+    background-color: var(--dark-color); /* Fallback color for browsers that do not support gradients */
+    background-image: linear-gradient(to top right,
+        var(--dark-color),
+        var(--dark-color),
+        #0A0A0A,
+        var(--dark-color),
+        rgba(54, 54, 54, 0.05),
+        var(--dark-color),
+        #0A0A0A
+    )
 }
 
 .about-me-image img {
@@ -295,14 +307,24 @@ nav ul {
 
     position: absolute;
     top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
+    left: 0;
+    transform: translate(0, -30%);
 
     font-size: 720px;
     color: transparent;
     -webkit-text-stroke: 1px var(--light-stroke-color);
 
     cursor: default;
+    animation: scrollText 60s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
 }
 
 .flex-list li {
