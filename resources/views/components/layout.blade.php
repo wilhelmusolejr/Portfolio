@@ -17,7 +17,7 @@
 
     </head>
 
-    <body>
+    <body class="bg-dark">
 
         <x-navigator></x-navigator>
 

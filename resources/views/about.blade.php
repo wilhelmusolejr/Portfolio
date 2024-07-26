@@ -1,3 +1,7 @@
+@php
+    $project_path = "project/"
+@endphp
+
 <x-layout>
 
     @push('scripts')
@@ -130,7 +134,7 @@
                     @foreach ($projects as $project)
                     <div class="project {{ implode(' ', $project['type']) }}">
                         <div class="project-image">
-                            <a href="{{ $project['link'] }}" target="_blank"><img src="{{ asset('img/Projects/Portfolio/'. $project['file']['portfolio']) }}" alt=""></a>
+                            <a href="{{ $project_path.$project['link']['project'] }}" target="_blank"><img src="{{ asset('img/Projects/Portfolio/'. $project['file']['portfolio']) }}" alt=""></a>
                             <div class="project-info d-flex justify-content-end gap-2">
                                 @foreach ($project['type'] as $type)
                                     @switch($type)

@@ -175,7 +175,10 @@ Route::get('/about', function () {
                 'portfolio' => 'philippinecurrency.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'https://github.com/wilhelmusolejr/Philippine-Currency-Identifier'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Philippine-Currency-Identifier',
+                'project' => 'philippine-currency-identifier'
+            ]
         ],
         [
             'title' => 'Mobhie',
@@ -186,7 +189,10 @@ Route::get('/about', function () {
                 'portfolio' => 'mobhie.jpg'
             ],
             'project_showcase' => 1,
-            'link' => 'https://github.com/wilhelmusolejr/Mobhie'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Mobhie',
+                'project' => 'mobhie'
+            ]
         ],
         [
             'title' => 'PennyWISE PH',
@@ -197,7 +203,10 @@ Route::get('/about', function () {
                 'portfolio' => 'pennywise.jpg'
             ],
             'project_showcase' => 4,
-            'link' => 'https://github.com/wilhelmusolejr/PennyWISE'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/PennyWISE',
+                'project' => 'pennywise'
+            ]
         ],
         [
             'title' => 'Consultation Clinic',
@@ -208,7 +217,10 @@ Route::get('/about', function () {
                 'portfolio' => 'clinic.jpg'
             ],
             'project_showcase' => 2,
-            'link' => 'https://github.com/wilhelmusolejr/Online-appointment-and-consultation-clinic'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Online-appointment-and-consultation-clinic',
+                'project' => 'online-appointment-and-consultation-clinic'
+            ]
         ],
         [
             'title' => 'Jollymax BOT',
@@ -219,7 +231,10 @@ Route::get('/about', function () {
                 'portfolio' => 'jollymax_bot.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/jollymax'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Jollymax-BOT',
+                'project' => 'jollymax'
+            ]
         ],
         [
             'title' => 'Tech Vuitton',
@@ -230,7 +245,10 @@ Route::get('/about', function () {
                 'portfolio' => 'techvouitton.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/tech-vuitton'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Tech-Vuitton',
+                'project' => 'tech-vuitton'
+            ]
         ],
         [
             'title' => 'Shopeeling',
@@ -241,7 +259,10 @@ Route::get('/about', function () {
                 'portfolio' => 'shopeeling.jpg'
             ],
             'project_showcase' => 3,
-            'link' => 'project/shopeeling'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Shopeeling',
+                'project' => 'shopeeling'
+            ]
         ],
         [
             'title' => 'Money Tracker v1',
@@ -252,7 +273,10 @@ Route::get('/about', function () {
                 'portfolio' => 'money_tracker_v1.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/money-tracker-v1'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Money-Tracker-v1',
+                'project' => 'money-tracker-v1'
+            ]
         ],
         [
             'title' => 'Gcash BOT',
@@ -263,7 +287,10 @@ Route::get('/about', function () {
                 'portfolio' => 'gcash_bot.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/gcash'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Gcash-BOT',
+                'project' => 'gcash'
+            ]
         ],
         [
             'title' => 'NFT marketplace',
@@ -274,7 +301,10 @@ Route::get('/about', function () {
                 'portfolio' => 'nft.jpg'
             ],
             'project_showcase' => 5,
-            'link' => 'project/nft-marketplace'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/NFT-Marketplace',
+                'project' => 'nft-marketplace'
+            ]
         ],
         [
             'title' => 'Microsoft Reward BOT',
@@ -285,7 +315,10 @@ Route::get('/about', function () {
                 'portfolio' => 'microsoft_bot.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/microsoft-reward'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Microsoft-Reward-BOT',
+                'project' => 'microsoft-reward'
+            ]
         ],
         [
             'title' => 'Netflakes',
@@ -296,7 +329,10 @@ Route::get('/about', function () {
                 'portfolio' => 'netflakes.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/netflakes'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/Netflakes',
+                'project' => 'netflakes'
+            ]
         ],
         [
             'title' => 'E-commerce',
@@ -307,9 +343,28 @@ Route::get('/about', function () {
                 'portfolio' => 'ecommerce.jpg'
             ],
             'project_showcase' => null,
-            'link' => 'project/e-commerce'
+            'link' => [
+                'github' => 'https://github.com/wilhelmusolejr/E-commerce',
+                'project' => 'e-commerce'
+            ]
         ]
     ];
 
     return view('about', ['projects' => $projects]);
 }) -> name('about');
+
+Route::get('/project/philippine-currency-identifier', function() {
+    return view('projects/philippine-currency-identifier');
+}) -> name('philippine-currency-identifier');
+
+Route::get('/project/mobhie', function() {
+    return view('projects/mobhie');
+}) -> name('mobhie');
+
+Route::get('/project/pennywise', function() {
+    return view('projects/pennywise');
+}) -> name('pennywise');
+
+Route::get('/project/online-appointment-and-consultation-clinic', function() {
+    return view('projects/online-appointment-and-consultation-clinic');
+}) -> name('online-appointment-and-consultation-clinic');
