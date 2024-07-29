@@ -123,8 +123,8 @@ class ProjectController extends Controller {
             ],
             'project_showcase' => null,
             'link' => [
-                'github' => 'https://github.com/wilhelmusolejr/DASS-Depressioon-Level-Predictor',
-                'project' => 'dass-Depressioon-Level-Predictor'
+                'github' => 'https://github.com/wilhelmusolejr/DASS-Depression-Level-Predictor',
+                'project' => 'dass-depression-Level-Predictor'
             ]
             ],
         [
@@ -257,63 +257,30 @@ class ProjectController extends Controller {
     // PROJECTS
     // PROJECTS
 
-    public function philippineCurrencyIdentifier() {
-        $id = 14;
-        $project = $this -> getProject($id);
-        $title = $this -> generateTitle($project['title']);
+    public function showProject($slug) {
+        // Define project mapping
+        $projects = [
+            'philippine-currency-identifier' => 14,
+            'mobhie' => 13,
+            'pennywise' => 12,
+            'online-appointment-and-consultation-clinic' => 11,
+            'dass-depression-Level-Predictor' => 8,
+        ];
 
-        return view('projects.philippine-currency-identifier', [
+        // Check if slug exists in the mapping
+        if (!array_key_exists($slug, $projects)) {
+            abort(404, 'Project not found');
+        }
+
+        $id = $projects[$slug];
+        $project = $this->getProject($id);
+        $title = $this->generateTitle($project['title']);
+        $pathSuffix = $slug . '/';
+
+        return view('projects.' . $slug, [
             'project' => $project,
             'title' => $title,
-            'projectPath' => $this -> project_info_path .'philippine-currency-identifier/'
-        ]);
-    }
-
-    public function mobhie() {
-        $id = 13;
-        $project = $this -> getProject($id);
-        $title = $this -> generateTitle($project['title']);
-
-        return view('projects.mobhie', [
-            'project' => $project,
-            'title' => $title,
-            'projectPath' => $this -> project_info_path .'mobhie/'
-        ]);
-    }
-
-    public function pennywise() {
-        $id = 12;
-        $project = $this -> getProject($id);
-        $title = $this -> generateTitle($project['title']);
-
-        return view('projects.pennywise', [
-            'project' => $project,
-            'title' => $title,
-            'projectPath' => $this -> project_info_path .'pennywise/'
-        ]);
-    }
-
-    public function onlineAppointmentAndConsultationClinic() {
-        $id = 11;
-        $project = $this -> getProject($id);
-        $title = $this -> generateTitle($project['title']);
-
-        return view('projects.online-appointment-and-consultation-clinic', [
-            'project' => $project,
-            'title' => $title,
-            'projectPath' => $this -> project_info_path .'online-appointment-and-consultation-clinic/'
-        ]);
-    }
-
-    public function dassDepressioonLevelPredictor() {
-        $id = 8;
-        $project = $this -> getProject($id);
-        $title = $this -> generateTitle($project['title']);
-
-        return view('projects.dass-Depressioon-Level-Predictor', [
-            'project' => $project,
-            'title' => $title,
-            'projectPath' => $this -> project_info_path .'dass-Depressioon-Level-Predictor/'
+            'projectPath' => $this->project_info_path . $pathSuffix
         ]);
     }
 
