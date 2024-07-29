@@ -144,7 +144,7 @@ class ProjectController extends Controller {
         ],
         [
             'id' => 10,
-            'title' => 'Jollymax BOT',
+            'title' => 'J077YM4X PH',
             'description' => 'Bot for auto buy',
             'type' => ['automate'],
             'file' => [
