@@ -112,6 +112,11 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'null' => [
+                'driver' => 'sqlite',
+                'database' => ':memory:',
+                'prefix' => '',
+        ],
     ],
 
     /*
