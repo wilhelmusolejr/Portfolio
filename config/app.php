@@ -105,12 +105,6 @@ return [
         ),
     ],
 
-    'providers' => [
-        // Other service providers...
-        Illuminate\Database\DatabaseServiceProvider::class,
-        // Other service providers...
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
